@@ -28,4 +28,8 @@ sudo systemctl enable mariadb
 mysql -u root -e "SHOW DATABASES";
 
 #Download starter content
+cd /vagrant
+sudo -u vagrant wget -q  https://raw.githubusercontent.com/Seetharama1231/vagrant-lamp/main/files/index.html
+sudo -u vagrant wget -q   https://raw.githubusercontent.com/Seetharama1231/vagrant-lamp/main/files/info.php
+
 systemctl start httpd 
