@@ -20,11 +20,13 @@ ln -s /vagrant  /var/www/html
 yum install -y php php-cli php-common php-devel php-mysql
 
 #MySQL
-sudo yum list installed | grep mariadb
-sudo yum install mariadb-server
+#sudo yum list installed | grep mariadb
+#sudo yum install -y mysql-server
+sudo yum install  -y mariadb-server
 sudo systemctl start mariadb 
 sudo systemctl enable mariadb 
 
+mysql -u root -e "CREATE DATABASE IF NOT EXISTS	dev_test";
 mysql -u root -e "SHOW DATABASES";
 
 #Download starter content
